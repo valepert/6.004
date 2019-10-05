@@ -1,0 +1,164 @@
+{
+  "name": "6.004",
+  "version": "1.0.0",
+  "description": "Computation Structures",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "tsc-watch --onSuccess 'npm --silent run test-and-eslint'",
+    "test-and-eslint": "npm run test && npm run eslint",
+    "test": "mocha --reporter min --require esm",
+    "coverage": "nyc mocha --require esm",
+    "eslint": "eslint --cache -f unix --ext .ts src/ test/",
+    "eslint-fix": "eslint --fix --cache -f unix --ext .ts src/ test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valepert/6.004.git"
+  },
+  "author": "valepert",
+  "license": "ISC",
+  "homepage": "https://github.com/valepert/6.004#readme",
+  "devDependencies": {
+    "@ampproject/rollup-plugin-closure-compiler": "^0.10.0",
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.1",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "esm": "^3.2.25",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1",
+    "rollup": "^1.19.4",
+    "ts-node": "^8.4.1",
+    "tsc-watch": "^2.4.0",
+    "typescript": "^3.5.3"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "proseWrap": "always",
+    "trailingComma": "all"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      "prettier",
+      "prettier/@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "no-useless-return": "warn",
+      "no-else-return": [
+        "warn",
+        {
+          "allowElseIf": false
+        }
+      ],
+      "no-param-reassign": [
+        "warn",
+        {
+          "props": false
+        }
+      ],
+      "eqeqeq": [
+        "warn",
+        "always",
+        {
+          "null": "ignore"
+        }
+      ],
+      "class-methods-use-this": [
+        "warn",
+        {
+          "exceptMethods": []
+        }
+      ],
+      "object-shorthand": [
+        "warn",
+        "always",
+        {
+          "ignoreConstructors": false,
+          "avoidQuotes": true
+        }
+      ],
+      "prefer-destructuring": [
+        "warn",
+        {
+          "VariableDeclarator": {
+            "array": false,
+            "object": true
+          },
+          "AssignmentExpression": {
+            "array": true,
+            "object": true
+          }
+        },
+        {
+          "enforceForRenamedProperties": false
+        }
+      ],
+      "prefer-object-spread": "error",
+      "prefer-template": "warn",
+      "max-len": [
+        "warn",
+        {
+          "comments": 80
+        }
+      ],
+      "max-classes-per-file": [
+        "error",
+        1
+      ],
+      "max-statements": [
+        "error",
+        10
+      ],
+      "complexity": [
+        "error",
+        10
+      ],
+      "max-nested-callbacks": [
+        "error",
+        3
+      ],
+      "@typescript-eslint/no-magic-numbers": [
+        "warn",
+        {
+          "ignoreArrayIndexes": true,
+          "ignore": [
+            0,
+            1,
+            -1,
+            2
+          ]
+        }
+      ],
+      "@typescript-eslint/no-parameter-properties": "off",
+      "@typescript-eslint/member-ordering": "warn",
+      "@typescript-eslint/unified-signatures": "warn",
+      "@typescript-eslint/explicit-function-return-type": [
+        "warn",
+        {
+          "allowExpressions": true
+        }
+      ],
+      "@typescript-eslint/semi": "warn"
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+    }
+  }
+}

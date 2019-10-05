@@ -1,0 +1,7 @@
+node_modules
+.eslintcache
+.nyc_output
+
+src/**/*.js
+src/**/*.map
+test/**/*.js
