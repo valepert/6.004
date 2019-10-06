@@ -23,6 +23,7 @@
     "@types/chai": "^4.2.3",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.1",
+    "@types/ramda": "^0.26.26",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "chai": "^4.2.0",
@@ -160,5 +161,8 @@
       "node": true,
       "mocha": true
     }
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
   }
 }
