@@ -24,143 +24,23 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.1",
     "@types/ramda": "^0.26.26",
-    "@typescript-eslint/eslint-plugin": "^2.0.0",
-    "@typescript-eslint/parser": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
     "chai": "^4.2.0",
-    "eslint": "^6.1.0",
+    "eslint": "^8.9.0",
     "eslint-config-prettier": "^6.0.0",
     "esm": "^3.2.25",
-    "mocha": "^6.2.1",
+    "mocha": "^9.2.0",
     "nyc": "^15.1.0",
     "rollup": "^1.19.4",
     "ts-node": "^8.4.1",
-    "tsc-watch": "^2.4.0",
-    "typescript": "^3.5.3"
+    "tsc-watch": "^4.6.0",
+    "typescript": "^4.5.5"
   },
   "prettier": {
     "singleQuote": true,
     "proseWrap": "always",
     "trailingComma": "all"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:@typescript-eslint/recommended-requiring-type-checking",
-      "prettier",
-      "prettier/@typescript-eslint"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    },
-    "plugins": [
-      "@typescript-eslint"
-    ],
-    "rules": {
-      "no-useless-return": "warn",
-      "no-else-return": [
-        "warn",
-        {
-          "allowElseIf": false
-        }
-      ],
-      "no-param-reassign": [
-        "warn",
-        {
-          "props": false
-        }
-      ],
-      "eqeqeq": [
-        "warn",
-        "always",
-        {
-          "null": "ignore"
-        }
-      ],
-      "class-methods-use-this": [
-        "warn",
-        {
-          "exceptMethods": []
-        }
-      ],
-      "object-shorthand": [
-        "warn",
-        "always",
-        {
-          "ignoreConstructors": false,
-          "avoidQuotes": true
-        }
-      ],
-      "prefer-destructuring": [
-        "warn",
-        {
-          "VariableDeclarator": {
-            "array": false,
-            "object": true
-          },
-          "AssignmentExpression": {
-            "array": true,
-            "object": true
-          }
-        },
-        {
-          "enforceForRenamedProperties": false
-        }
-      ],
-      "prefer-object-spread": "error",
-      "prefer-template": "warn",
-      "max-len": [
-        "warn",
-        {
-          "comments": 80
-        }
-      ],
-      "max-classes-per-file": [
-        "error",
-        1
-      ],
-      "max-statements": [
-        "error",
-        10
-      ],
-      "complexity": [
-        "error",
-        10
-      ],
-      "max-nested-callbacks": [
-        "error",
-        3
-      ],
-      "@typescript-eslint/no-magic-numbers": [
-        "warn",
-        {
-          "ignoreArrayIndexes": true,
-          "ignore": [
-            0,
-            1,
-            -1,
-            2
-          ]
-        }
-      ],
-      "@typescript-eslint/no-parameter-properties": "off",
-      "@typescript-eslint/member-ordering": "warn",
-      "@typescript-eslint/unified-signatures": "warn",
-      "@typescript-eslint/explicit-function-return-type": [
-        "warn",
-        {
-          "allowExpressions": true
-        }
-      ],
-      "@typescript-eslint/semi": "warn"
-    },
-    "env": {
-      "browser": true,
-      "node": true,
-      "mocha": true
-    }
   },
   "dependencies": {
     "ramda": "^0.26.1"

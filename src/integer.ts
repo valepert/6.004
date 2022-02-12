@@ -42,6 +42,7 @@ export class Integer {
   }
 
   public toHex(): string {
-    return this.value.toString(16); // eslint-disable-line
+    const HEX_RADIX = 16;
+    return this.value.toString(HEX_RADIX);
   }
 }
